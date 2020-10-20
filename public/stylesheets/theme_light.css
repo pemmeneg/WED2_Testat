@@ -1,0 +1,74 @@
+body {
+    background-color: #ffffff;
+}
+
+h1 {
+    color:#004671;
+}
+
+button, input[type=submit], .button, select {
+    color:#0065a3;
+    border-color:#0065a3;
+}
+
+.button.green {
+    border-color:#0fd20f;
+    color:#0fd20f;
+}
+
+.button.cancel {
+    border-color:#B00020;
+    color:#B00020;
+}
+
+button:hover, input[type=submit]:hover, button:active, button:focus, input[type=submit]:active, input[type=submit]:focus, .button:hover, .button:focus, .button:active {
+    background-color:#0065a3;
+    color:#fff;
+}
+
+.button.green:hover, .button.green:focus {
+    background-color:#0fd20f;
+}
+
+.button.cancel:hover, .button.cancel:focus {
+    background-color:#B00020;
+}
+
+#headerholder {
+    border-color: #0065a3;
+    background-color:#c8ddea;
+}
+
+#styling ul {
+    background-color:#ffffff;
+    border-color:#0065a3;
+}
+
+#styling ul li a:hover {
+    color:#ffffff;
+    background-color: #0065a3;
+}
+
+#styling ul a {
+    color:#0065a3;
+}
+
+#notes {
+    border-color: #0065a3;
+}
+
+.note {
+    border-color:#0065a3;
+}
+
+.note:nth-child(2n) {
+    background-color:#c8ddea;
+}
+
+.notebody .importance {
+    color:#004671;
+}
+
+#editnote label input, #editnote label textarea {
+    border-color:#0065a3;
+}

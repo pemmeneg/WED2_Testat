@@ -1,0 +1,25 @@
+{
+  "name": "testat",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node bin/www.js",
+    "startdeb": "DEBUG=* node bin/www.js",
+    "startops": "DEBUG=expressrep:* NODE_ENV=ops node bin/www.js",
+    "startenv": "export $(cat .env | xargs) && node bin/www.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-session": "^1.17.1",
+    "hbs": "~4.0.4",
+    "http-errors": "~1.6.3",
+    "method-override": "^3.0.0",
+    "morgan": "~1.9.1",
+    "nedb": "^1.8.0",
+    "nodb": "0.0.1"
+  }
+}

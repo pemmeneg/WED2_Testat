@@ -1,0 +1,270 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: 'Roboto';
+  color:#004671;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1 {
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+button, input[type=submit], .button, select {
+  padding:10px 20px;
+  background-color:#fff;
+  border-radius: 5px;
+  color:#0065a3;
+  text-transform: uppercase;
+  border:2px solid #0065a3;
+  transition:background-color 0.2s ease, color 0.2s ease, border 0.2s ease;
+}
+
+button:hover, input[type=submit]:hover, button:active, button:focus, input[type=submit]:active, input[type=submit]:focus, .button:hover, .button:focus, .button:active {
+  cursor:pointer;
+}
+
+body .fas {
+  margin:0 3px;
+}
+
+select option {
+  padding:5px 0;
+}
+
+.button {
+  font-size:14px;
+  text-decoration: none;
+  display:inline-block;
+}
+
+.holder {
+  width:100%;
+  float:left;
+  padding:10px 0;
+}
+
+.content {
+  width: 1080px;
+  margin:0px auto;
+}
+
+#headerholder {
+  border-bottom:2px solid #0065a3;
+  background-color:#c8ddea;
+  position:fixed;
+  top:0;
+  -webkit-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.2);
+}
+
+#header button {
+  display:inline-block;
+}
+
+#header select {
+  padding:8px 20px;
+}
+
+#header h1 {
+  margin:10px 0;
+}
+
+#newnote {
+  float:left;
+}
+
+#styling {
+  float:right;
+}
+
+#sorting {
+  width: 100%;
+  float:left;
+  margin-top:10px;
+}
+
+#sorting .finished {
+  float:right;
+}
+
+#styling {
+  position: relative;
+}
+
+#styling ul {
+  display:none;
+  position: absolute;
+  left:0;
+  top:38px;
+  width:100%;
+  border:2px solid #0065a3;
+  border-radius:5px;
+  box-sizing: border-box;
+  padding:2px;
+}
+
+#styling:hover ul {
+  display:block;
+}
+
+#styling ul li a {
+  padding:8px 20px;
+  transition:color 0.2s ease, background-color 0.2s ease;
+  border-radius: 3px;
+  display:block;
+}
+
+#styling ul a {
+  text-decoration: none;
+}
+
+#contentholder {
+  margin-top:125px;
+}
+
+#notes {
+  width:100%;
+  border-top:2px solid #0065a3;
+  border-bottom:none
+}
+
+.note {
+  padding: 10px;
+  box-sizing: border-box;
+  transition:background-color 0.2s ease;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom:2px solid #0065a3;
+
+}
+
+.note .finished {
+  order:1;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.note .notebody {
+  order:2;
+  flex-grow:4;
+}
+
+.notebody .title {
+  float:left;
+  width: 100%;
+  margin-bottom: 10px;
+  font-weight:bold;
+  font-size:18px;
+}
+
+.notebody .importance {
+  float:right;
+}
+
+.notebody textarea{
+  width:100%;
+  resize:vertical;
+  min-height: 80px;
+  box-sizing: border-box;
+}
+
+.note .editnote {
+  order:3;
+  flex-grow:1;
+  text-align:center;
+}
+
+.note .editnote .button {
+  padding:10px 20px;
+}
+
+#editnote {
+  padding:0 10px;
+  box-sizing: border-box;
+}
+
+#editnote form {
+  margin-bottom:10px;
+}
+
+#editnote label {
+  padding:0 0 25px 0;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#editnote label span {
+  width:150px;
+}
+
+#editnote label input, #editnote label textarea {
+  box-sizing: border-box;
+  padding: 5px;
+  font-size: 14px;
+  flex-grow: 5;
+  border-style:solid;
+  border-width: 2px;
+}
+
+#editnote textarea {
+  min-height: 100px;
+  resize:vertical;
+}
+
+#editnote #finished {
+  display:block;
+}
+
+#editnote input[type=checkbox] {
+  width:auto;
+  float:left;
+  margin-right:10px;
+}
+

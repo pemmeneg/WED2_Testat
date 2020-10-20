@@ -1,0 +1,49 @@
+@media screen and (max-width: 1080px) {
+    .content {
+        width:100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #headerholder {
+        position:relative;
+        padding:5px;
+        box-sizing: border-box;
+    }
+
+    #contentholder {
+        margin-top:10px;
+    }
+
+    #header #sorting .button {
+        width:100%;
+        box-sizing: border-box;
+        border-radius: 0px;
+        margin-top:5px;
+        text-align: center;
+    }
+
+    .note, #editnote label {
+        flex-wrap: wrap;
+        padding-bottom:15px;
+    }
+
+    .note .notebody, #editnote label span {
+        order:1;
+        flex:0 0 100%;
+        margin-bottom:10px;
+    }
+
+    #editnote label input, #editnote label textarea {
+        order:2;
+    }
+
+    .note .finished {
+        order:2;
+        text-align: left;
+    }
+
+    .note .editnote {
+        text-align: right;
+    }
+}

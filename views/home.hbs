@@ -1,0 +1,56 @@
+<div id="headerholder" class="holder">
+    <div id="header" class="content">
+        <div id="newnote">
+            <a href="/newnote" class="button green"><i class="fas fa-plus"></i> Create new Note</a>
+        </div>
+        <div id="styling">
+            <span class="button">Select theme <i class="fas fa-paint-roller"></i></span>
+            <ul>
+                <li><a href="/home?theme=light">Light </a></li>
+                <li><a href="/home?theme=dark">Dark </a></li>
+                <li><a href="/home?theme=fancy">Fancy </a></li>
+            </ul>
+        </div>
+        <div id="sorting">
+            <a href="/home?orderBy=finishdate" class="button finishdate">By finish date</a>
+            <a href="/home?orderBy=createddate" class="button createddate">By created date</a>
+            <a href="/home?orderBy=importance" class="button importance">By Importance</a>
+            {{#if userSettings.displayFinished}}
+                <a href="/home?togglefinished=true" class="button finished">Hide finished</a>
+            {{else}}
+                <a href="/home?togglefinished=true" class="button finished">Show finished</a>
+            {{/if}}
+        </div>
+    </div>
+</div>
+<div id="contentholder" class="holder">
+    <div id="content" class="content">
+        <h1>{{title}}</h1>
+        <div id="notes">
+            {{#each notes}}
+                <div class="note">
+
+                        <div class="finished">
+                            <label><input name="finished" type="checkbox" {{finished}} disabled> Finished</label>
+                        </div>
+                        <div class="notebody">
+                            <div class="title">
+                                {{title}}
+                                <div class="importance">
+                                    {{#each importance}}
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                    {{/each}}
+                                </div>
+                            </div>
+                            <div class="notecontent">
+                                <textarea wrap="off" name="content" disabled>{{content}}</textarea>
+                            </div>
+                        </div>
+                        <div class="editnote">
+                            <a href="/edit?id={{_id}}" class="button">Edit <i class="fas fa-pencil-alt"></i></a>
+                        </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

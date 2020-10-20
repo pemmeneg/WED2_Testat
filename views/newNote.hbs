@@ -1,0 +1,18 @@
+<div id="headerholder" class="holder">
+    <div id="header" class="content">
+        <h1>New note:</h1>
+    </div>
+</div>
+<div id="contentholder" class="holder">
+    <div id="editnote" class="content">
+        <form action="/home" method="post">
+            <label>Title: <input id="titleinput" type="text" required /></label>
+            <label>Description: <textarea id="descriptioninput" required></textarea></label>
+            <label>Importance: <input id="importanceinput" type="range" min="0" max="5" /></label>
+            <label>Deadline: <input id="deadlineinput" type="date" required /></label>
+            <label><input id="finishedinput" type="checkbox" /> Finished</label>
+            <input type="submit" value="Create">
+            <button>Cancel</button>
+        </form>
+    </div>
+</div>

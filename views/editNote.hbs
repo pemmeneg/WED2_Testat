@@ -1,0 +1,19 @@
+<div id="headerholder" class="holder">
+    <div id="header" class="content">
+        <h1>{{this.title}}</h1>
+    </div>
+</div>
+<div id="contentholder" class="holder">
+    <div id="editnote" class="content">
+        <form action="/home" method="post">
+            <input name="_id" type="text" value="{{this.note._id}}" hidden>
+            <label><span>Title:</span> <input name="title" type="text" value="{{this.note.title}}" required /></label>
+            <label><span>Description:</span> <textarea name="content" required>{{this.note.content}}</textarea></label>
+            <label><span>Importance:</span> <input name="importance" type="range" min="1" max="5" value="{{this.note.importance}}"/></label>
+            <label><span>Deadline:</span> <input name="deadline" type="date" value="{{this.note.deadline}}" required /></label>
+            <label id="finished"><input name="finished" value="{{finished}}" type="checkbox" {{this.note.finished}} /> Finished</label>
+            <input type="submit" value="{{this.title}}">
+        </form>
+        <a href="/home" class="button cancel">Cancel</a>
+    </div>
+</div>

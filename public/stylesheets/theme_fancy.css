@@ -1,0 +1,86 @@
+body {
+    background-image:url("../images/blobfisch.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color:#ffffff;
+}
+
+h1 {
+    color:#ffffff;
+}
+
+button, input[type=submit], .button, select {
+    color:#ffffff;
+    border-color:#03DAC6;
+    background-color: #03DAC6;
+}
+
+.button.green {
+    border-color:#0fd20f;
+    color:#0fd20f;
+    background-color:#333333;
+}
+
+.button.cancel {
+    border-color:#B00020;
+    color:#B00020;
+    background-color: transparent;
+}
+
+button:hover, input[type=submit]:hover, button:active, button:focus, input[type=submit]:active, input[type=submit]:focus, .button:hover, .button:focus, .button:active {
+    background-color:#333333;
+    color:#fff;
+}
+
+.button.green:hover, .button.green:focus {
+    background-color:#0fd20f;
+}
+
+.button.cancel:hover, .button.cancel:focus {
+    background-color:#B00020;
+}
+
+#headerholder {
+    border-color: #ffffff;
+    background-color:rgba(51,51,51,0.8);
+    -webkit-box-shadow: 0px 6px 6px 0px rgba(255,255, 255,0.2);
+    -moz-box-shadow: 0px 6px 6px 0px rgba(255,255, 255,0.2);
+    box-shadow: 0px 6px 6px 0px rgba(255,255, 255,0.2);
+}
+
+#styling ul {
+    background-color:#333333;
+    border-color:#03DAC6;
+}
+
+#styling ul li a:hover {
+    color:#ffffff;
+    background-color: #03DAC6;
+}
+
+#styling ul a {
+    color:#ffffff;
+}
+
+#notes {
+    border-color: #ffffff;
+}
+
+.note {
+    border-color:#ffffff;
+}
+
+.note:nth-child(2n) {
+    background-color:rgba(51,51,51,0.8);
+}
+
+.notebody .importance {
+    color:#03DAC6;
+}
+
+#editnote label input, #editnote label textarea {
+    border-color:#ffffff;
+    background-color: #333333;
+    color:#ffffff;
+}
