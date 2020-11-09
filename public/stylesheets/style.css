@@ -82,7 +82,6 @@ select option {
 
 .holder {
   width:100%;
-  float:left;
   padding:10px 0;
 }
 
@@ -101,30 +100,32 @@ select option {
   box-shadow: 0px 4px 6px 0px rgba(0,0,0,0.2);
 }
 
-#header button {
-  display:inline-block;
-}
-
-#header select {
-  padding:8px 20px;
+#header {
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: space-between;
 }
 
 #header h1 {
   margin:10px 0;
 }
 
-#newnote {
-  float:left;
+#header .toggleSorting {
+  display:none;
 }
 
-#styling {
-  float:right;
+#header .toggleSorting.button i {
+  margin-right:5px;
 }
 
 #sorting {
   width: 100%;
-  float:left;
   margin-top:10px;
+}
+
+#sorting .button i {
+  padding-left: 7px;
+  margin-right: -5px;
 }
 
 #sorting .finished {
@@ -166,6 +167,16 @@ select option {
   margin-top:125px;
 }
 
+#placeholder {
+  width:100%;
+  text-align: center;
+  padding:40px 0;
+}
+
+#placeholder .button {
+  margin-top:20px;
+}
+
 #notes {
   width:100%;
   border-top:2px solid #0065a3;
@@ -181,18 +192,38 @@ select option {
   justify-content: space-around;
   align-items: center;
   border-bottom:2px solid #0065a3;
-
 }
 
 .note .finished {
   order:1;
-  flex-grow: 1;
+  text-align: center;
+  font-size:20px;
+  width:50px;
   text-align: center;
 }
 
+.note .is-finished {
+  color: #199019;
+}
+
+.note .not-finished {
+  color: lightgray;
+}
+
+.note .remaining-time {
+  width:150px;
+  order: 2;
+  text-align: center;
+}
+
+.note .remaining-time i {
+  color:#B00020;
+  font-size:24px;
+}
+
 .note .notebody {
-  order:2;
-  flex-grow:4;
+  order:3;
+  flex-grow:8;
 }
 
 .notebody .title {
@@ -215,8 +246,8 @@ select option {
 }
 
 .note .editnote {
-  order:3;
-  flex-grow:1;
+  order:4;
+  flex-grow:2;
   text-align:center;
 }
 

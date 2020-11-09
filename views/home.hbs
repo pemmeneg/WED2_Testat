@@ -12,14 +12,44 @@
             </ul>
         </div>
         <div id="sorting">
-            <a href="/home?orderBy=finishdate" class="button finishdate">By finish date</a>
-            <a href="/home?orderBy=createddate" class="button createddate">By created date</a>
-            <a href="/home?orderBy=importance" class="button importance">By Importance</a>
-            {{#if userSettings.displayFinished}}
-                <a href="/home?togglefinished=true" class="button finished">Hide finished</a>
-            {{else}}
-                <a href="/home?togglefinished=true" class="button finished">Show finished</a>
-            {{/if}}
+            <a href="#sort" class="button toggleSorting"><i class="fas fa-filter"></i> Sort</a>
+            <div id="options">
+                <a href="/home?orderBy=finishdate" class="button finishdate">
+                    By finish date
+                    {{#if sorting.finishdate}}
+                        {{#if sorting.asc}}
+                            <i class="fas fa-long-arrow-alt-up"></i>
+                        {{else}}
+                            <i class="fas fa-long-arrow-alt-down"></i>
+                        {{/if}}
+                    {{/if}}
+                </a>
+                <a href="/home?orderBy=createddate" class="button createddate">
+                    By created date
+                    {{#if sorting.createddate}}
+                        {{#if sorting.asc}}
+                            <i class="fas fa-long-arrow-alt-up"></i>
+                        {{else}}
+                            <i class="fas fa-long-arrow-alt-down"></i>
+                        {{/if}}
+                    {{/if}}
+                </a>
+                <a href="/home?orderBy=importance" class="button importance">
+                    By Importance
+                    {{#if sorting.importance}}
+                        {{#if sorting.asc}}
+                            <i class="fas fa-long-arrow-alt-up"></i>
+                        {{else}}
+                            <i class="fas fa-long-arrow-alt-down"></i>
+                        {{/if}}
+                    {{/if}}
+                </a>
+                {{#if userSettings.displayFinished}}
+                    <a href="/home?togglefinished=true" class="button finished">Hide finished</a>
+                {{else}}
+                    <a href="/home?togglefinished=true" class="button finished">Show finished</a>
+                {{/if}}
+            </div>
         </div>
     </div>
 </div>
@@ -27,11 +57,24 @@
     <div id="content" class="content">
         <h1>{{title}}</h1>
         <div id="notes">
+            {{#if notes}}
             {{#each notes}}
                 <div class="note">
-
-                        <div class="finished">
-                            <label><input name="finished" type="checkbox" {{finished}} disabled> Finished</label>
+                    {{#if finished}}
+                        <div class="finished is-finished">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    {{else}}
+                        <div class="finished not-finished">
+                            <i class="far fa-square"></i>
+                        </div>
+                    {{/if}}
+                        <div class="remaining-time">
+                            {{#if overdue}}
+                                <i class="far fa-clock"></i>
+                            {{else}}
+                                {{remaining}}
+                            {{/if}}
                         </div>
                         <div class="notebody">
                             <div class="title">
@@ -51,6 +94,14 @@
                         </div>
                 </div>
             {{/each}}
+            {{else}}
+                <div id="placeholder">
+                    No notes yet!<br />
+                    <a href="/newnote" class="button green"><i class="fas fa-plus"></i> Create first Note</a>
+                </div>
+            {{/if}}
         </div>
     </div>
 </div>
+
+

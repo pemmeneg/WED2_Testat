@@ -6,6 +6,7 @@
 
 import app from '../app.js';
 import debug from 'debug';
+//@ts-ignore
 import http from 'http';
 
 const hostname = "127.0.0.1";
@@ -14,6 +15,7 @@ const hostname = "127.0.0.1";
  * Get port from environment and store in Express.
  */
 
+// @ts-ignore
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
@@ -70,10 +72,12 @@ function onError(error) {
   switch (error.code) {
     case 'EACCES':
       console.error(bind + ' requires elevated privileges');
+      // @ts-ignore
       process.exit(1);
       break;
     case 'EADDRINUSE':
       console.error(bind + ' is already in use');
+      // @ts-ignore
       process.exit(1);
       break;
     default:

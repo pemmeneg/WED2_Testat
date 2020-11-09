@@ -1,8 +1,8 @@
-{"title":"Note 4","content":"note 4","importance":"1","deadline":"2020-10-06","finished":"checked","created":"2020-10-08T14:47:03.934Z","_id":"A4cqJPUxyRv5cWHo"}
-{"title":"Note 2","content":"test","importance":"1","deadline":"2020-10-08","finished":"","created":"2020-10-08T14:39:23.458Z","_id":"AuAWLe6obkPh7qp8"}
-{"title":"Note 2","content":"note 2","importance":"3","deadline":"2020-10-08","finished":"checked","created":"2020-10-08T14:46:24.427Z","_id":"C7Kt2RDvSMDRkhJ0"}
-{"title":"Note 3","content":"Note 3","importance":"4","deadline":"2020-10-01","finished":"","created":"2020-10-08T14:46:45.023Z","_id":"K6eAcnn0SP3NwpNw"}
-{"title":"ARSCH 69420","content":"testtest 420","importance":"1","deadline":"2020-10-10","finished":"checked","created":"2020-10-10T11:39:52.498Z","_id":"Rxk1xWqkyjL4PJNV"}
-{"title":"Note 5","content":"note 5","importance":"5","deadline":"2020-10-07","finished":"","created":"2020-10-08T14:47:19.605Z","_id":"VZPADJ9gJlKI04wL"}
-{"title":"New Note","content":"arsch","importance":"2","deadline":"2020-09-17","finished":"","created":"2020-10-09T06:56:44.214Z","_id":"Vo9IDSJ0eUfkalSP"}
-{"title":"neue Notiz","content":"blabla","importance":"2","deadline":"2020-10-22","finished":"","created":"2020-10-12T16:57:35.182Z","_id":"WnB7kklEPLEwo635"}
+{"title":"Do stuff","content":"description of the stuff","importance":"2","deadline":"2020-11-21","finished":"","created":"2020-11-09T18:16:00.558Z","_id":"2ycSV1sALzynHaPJ"}
+{"title":"Some other stuff","content":"description of some other stuff","importance":"4","deadline":"2020-11-19","finished":"","created":"2020-11-09T18:16:40.436Z","_id":"RfQsoJvJhH4W4P4u"}
+{"title":"Something else","content":"description of something else","importance":"5","deadline":"2020-11-23","finished":"","created":"2020-11-09T18:17:11.378Z","_id":"imvRTxDi17Plnjug"}
+{"title":"Not important","content":"description of this note","importance":"1","deadline":"2020-11-16","finished":"","created":"2020-11-09T18:17:58.999Z","_id":"ttJL2veH3EJIzoOx"}
+{"title":"Something else","content":"description of something else","importance":"3","deadline":"2020-11-23","finished":"","created":"2020-11-09T18:17:11.378Z","_id":"imvRTxDi17Plnjug"}
+{"title":"Very important","content":"description of this note","importance":"5","deadline":"2020-11-18","finished":"","created":"2020-11-09T18:18:33.317Z","_id":"ONHryzSvZjEKaVAg"}
+{"title":"Finished","content":"desctiption of finished note","importance":"3","deadline":"2020-11-08","finished":"checked","created":"2020-11-09T18:19:05.144Z","_id":"GLEbXNXljEs7of3r"}
+{"title":"Past note","content":"description of past note","importance":"4","deadline":"2020-11-07","finished":"","created":"2020-11-09T18:19:43.708Z","_id":"fsxNcFlLV0qxkacT"}

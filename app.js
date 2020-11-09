@@ -1,7 +1,7 @@
 import createError from 'http-errors';
 import express from 'express';
+// @ts-ignore
 import path from 'path';
-import cookieParser from 'cookie-parser';
 import session from 'express-session';
 import  {sessionUserSettings} from './session/session-middleware.js';
 import logger from 'morgan';
