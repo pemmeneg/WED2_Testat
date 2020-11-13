@@ -8,7 +8,7 @@
             <ul>
                 <li><a href="/home?theme=light">Light </a></li>
                 <li><a href="/home?theme=dark">Dark </a></li>
-                <li><a href="/home?theme=fancy">Fancy </a></li>
+                <li><a href="/home?theme=fancy">Fishy </a></li>
             </ul>
         </div>
         <div id="sorting">
@@ -60,15 +60,16 @@
             {{#if notes}}
             {{#each notes}}
                 <div class="note">
-                    {{#if finished}}
-                        <div class="finished is-finished">
-                            <i class="fas fa-check"></i>
-                        </div>
-                    {{else}}
-                        <div class="finished not-finished">
-                            <i class="far fa-square"></i>
-                        </div>
-                    {{/if}}
+                    <div class="info">
+                        {{#if finished}}
+                            <div class="finished is-finished">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        {{else}}
+                            <div class="finished not-finished">
+                                <i class="far fa-square"></i>
+                            </div>
+                        {{/if}}
                         <div class="remaining-time">
                             {{#if overdue}}
                                 <i class="far fa-clock"></i>
@@ -76,9 +77,10 @@
                                 {{remaining}}
                             {{/if}}
                         </div>
+                    </div>
                         <div class="notebody">
                             <div class="title">
-                                {{title}}
+                                <h2>{{title}}</h2>
                                 <div class="importance">
                                     {{#each importance}}
                                         <i class="fa fa-star" aria-hidden="true"></i>

@@ -1,4 +1,8 @@
 @media screen and (max-width: 1080px) {
+    #headerholder {
+        padding:10px;
+        box-sizing: border-box;
+    }
     .content {
         width:100%;
     }
@@ -37,6 +41,10 @@
         text-align: center;
     }
 
+    .note {
+        justify-content: space-between;
+    }
+
     .note, #editnote label {
         flex-wrap: wrap;
         padding-bottom:15px;
@@ -52,8 +60,13 @@
         order:2;
     }
 
+    .note .info {
+        order:3;
+        justify-content: flex-start;
+    }
+
     .note .finished {
-        order:2;
+        margin-right:20px;
         text-align: left;
     }
 
@@ -63,5 +76,6 @@
 
     .note .editnote {
         text-align: right;
+        width:auto;
     }
 }

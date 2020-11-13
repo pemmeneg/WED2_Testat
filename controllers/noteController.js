@@ -3,7 +3,11 @@ import {noteService} from '../services/noteService.js';
 let data = {title : '', notes : {}, userSettings: {}};
 
 function home(req, res) {
-    renderAll(req, res);
+    if(!(Object.keys(req.query).length === 0 && req.query.constructor === Object)) {
+        res.redirect('/home');
+    } else {
+        renderAll(req, res);
+    }
 }
 
 function newNote(req, res) {
@@ -19,7 +23,7 @@ function createNote(req, res) {
         const importance = req.body.importance;
         const deadline = req.body.deadline;
         let finished = "";
-        if(req.body.finished != undefined) {
+        if(req.body.finished !== undefined) {
             finished = "checked";
         }
 
@@ -37,7 +41,6 @@ function createNote(req, res) {
 
 function getNote(req, res) {
     noteService.get(req.query.id, function (err, note) {
-        console.log(note);
         const receivedNote = {title : 'Edit Note', note : note, userSettings: {theme : req.session.userSettings.theme}};
         res.render('editNote', receivedNote);
     });
@@ -49,8 +52,9 @@ function editNote(req, res) {
     const content = req.body.content;
     const importance = req.body.importance;
     const finished = req.body.finished;
+    const deadline = req.body.deadline;
 
-    noteService.edit(id, title, content, importance, finished, false,function (err, note) {
+    noteService.edit(id, title, content, importance, deadline, finished, function (err, note) {
         renderAll(req, res);
     });
 }
@@ -101,8 +105,8 @@ async function renderAll(req, res) {
             }
         }
         data = {title : 'Notes', notes : notes, userSettings : req.userSettings, sorting: sorting}
-
         res.render('home', data);
+
     });
 }
 export {home, newNote, createNote, getNote, editNote};

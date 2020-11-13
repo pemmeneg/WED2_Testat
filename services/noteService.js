@@ -56,7 +56,6 @@ class NoteStore {
         }
         //@ts-ignore
         db.find(query).sort(sortQuery).exec(function (err, docs) {
-            console.log(docs);
             for (let note of docs) {
                 //let importance = Array(note.importance);
                 let importance = note.importance;

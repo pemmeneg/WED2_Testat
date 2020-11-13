@@ -6,10 +6,10 @@ class Note {
     private content : string;
     private importance : string;
     private deadline : string;
-    private finished : boolean;
+    private finished : string;
     private created : string;
 
-    constructor(title : string, content : string, importance : string, deadline : string, finished : boolean, created : string){
+    constructor(title : string, content : string, importance : string, deadline : string, finished : string, created : string){
         this.title = title;
         this.content = content;
         this.importance = importance;
@@ -30,7 +30,7 @@ class NoteStore {
     }
 
 
-    add(title : string, content : string, importance : string, deadline : string, finished : boolean, created : string, callback) {
+    add(title : string, content : string, importance : string, deadline : string, finished : string, created : string, callback) {
         let note : Note = new Note(title, content, importance, deadline, finished, created);
         db.insert(note, function(err, newDoc){
             if(callback){
@@ -39,7 +39,7 @@ class NoteStore {
         });
     }
 
-    edit(id : number, title : string, content : string, importance : string, deadline : string, finished : boolean, callback) {
+    edit(id : number, title : string, content : string, importance : string, deadline : string, finished : string, callback) {
         db.update({_id: id}, {$set: {"title": title, "content" : content, "importance" : importance, "deadline" : deadline, "finished" : finished}}, {returnUpdatedDocs:true}, function (err, numReplaced) {
             callback(err, numReplaced);
         });
@@ -73,7 +73,6 @@ class NoteStore {
         }
         //@ts-ignore
         db.find(query).sort(sortQuery).exec(function(err, docs) {
-            console.log(docs);
             for(let note of docs) {
                 //let importance = Array(note.importance);
                 let importance = note.importance;

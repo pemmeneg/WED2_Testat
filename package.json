@@ -20,6 +20,7 @@
     "method-override": "^3.0.0",
     "morgan": "~1.9.1",
     "nedb": "^1.8.0",
-    "nodb": "0.0.1"
+    "nodb": "0.0.1",
+    "prettier": "^2.1.2"
   }
 }
